@@ -4,7 +4,9 @@
         <h3 @click="detaygoster=!detaygoster">{{ yapilacak.baslik }}</h3>
         <h1>{{ yapilacak.yapildi }}</h1>
         <div class="icon">
-            <i class='bx bx-edit-alt' ></i>
+            <router-link :to="{name:'YapilacakGuncelle',params:{id:yapilacak.id}}">
+                <i class='bx bx-edit-alt' ></i>
+            </router-link>
             <i class='bx bx-trash' @click="yapilacaksil"></i>
             <i class='bx bx-check' @click="toggle"></i>
         </div>

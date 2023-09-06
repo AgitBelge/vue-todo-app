@@ -1,9 +1,9 @@
 <template>
-  <form @submit.prevent="yapilakEkle">
-    <label for="">BAşlık:</label>
-    <input type="text" required v-model="baslik">
-    <label >içerik:</label>
-    <input type="text" required v-model="icerik">
+  <form @submit.prevent="yapilacakEkle">
+    <label for="baslik">Başlık:</label>
+    <input v-model="baslik" type="text" id="baslik" required>
+    <label for="icerik">içerik:</label>
+    <input v-model="icerik" type="text" id="icerik" required>
     <button>Ekle</button>
   </form>
 </template>
@@ -17,8 +17,21 @@ export default {
         }
     },
     methods: {
-        yapilakEkle(){
-            console.log(this.baslik,this.icerik);
+        yapilacakEkle(){
+            let yapilacak = {
+                baslik:this.baslik,
+                icerik:this.icerik,
+                yapildi:false,
+                id:Math.floor(Math.random()*1000000)
+            }
+                fetch('http://localhost:3000/yapilacaklar',{
+                    method:'POST',
+                    headers:{'Content-Type':'application/json'},
+                    body:JSON.stringify(yapilacak)
+                }).then(()=>{
+                    this.$router.push('/')
+                }).catch((err)=>console.log(err))
+                console.log(yapilacak.id)
         }
     },
 }
@@ -38,6 +51,7 @@ label{
     font-weight: bold;
     letter-spacing: 1px;
     margin: 20px 0 10px 0;
+    cursor: pointer;
 }
 input{
     padding: 10px;
