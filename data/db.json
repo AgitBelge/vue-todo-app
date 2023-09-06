@@ -1,0 +1,22 @@
+{
+  "yapilacaklar": [
+    {
+      "id": 1,
+      "baslik": "kitap oku",
+      "icerik": "harry potter kitabindan 10 sayfa oku",
+      "yapildi": true
+    },
+    {
+      "id": 2,
+      "baslik": "dizi izle",
+      "icerik": "sherlock holms 2 sezon 3. bölümü izle",
+      "yapildi": true
+    },
+    {
+      "id": 3,
+      "baslik": "alisveris yap",
+      "icerik": "sebze ve meyve al",
+      "yapildi": true
+    }
+  ]
+}
