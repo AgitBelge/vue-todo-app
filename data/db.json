@@ -3,7 +3,7 @@
     {
       "id": 1,
       "baslik": "kitap oku",
-      "icerik": "harry potter kitabindan 10 sayfa oku",
+      "icerik": "harry potter kitabindan 10000 sayfa oku",
       "yapildi": false
     },
     {
@@ -11,6 +11,12 @@
       "baslik": "dizi izle",
       "icerik": "sherlock holms 2 sezon 3. bölümü izle",
       "yapildi": false
+    },
+    {
+      "baslik": "bla",
+      "icerik": "bla",
+      "yapildi": true,
+      "id": 990423
     }
   ]
 }

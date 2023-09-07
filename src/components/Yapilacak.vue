@@ -2,7 +2,6 @@
   <div class="yapilacak" :class="{yapildi:yapilacak.yapildi}">
     <div class="baslik">
         <h3 @click="detaygoster=!detaygoster">{{ yapilacak.baslik }}</h3>
-        <h1>{{ yapilacak.yapildi }}</h1>
         <div class="icon">
             <router-link :to="{name:'YapilacakGuncelle',params:{id:yapilacak.id}}">
                 <i class='bx bx-edit-alt' ></i>
